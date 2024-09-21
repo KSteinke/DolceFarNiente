@@ -125,7 +125,7 @@ body{
     object-fit: cover; /* Dopasowanie obrazka bez zniekształcania */
     position: absolute;
     top: 0;
-    right: -50%;
+    right: -50vw;
     z-index: 2;
 }
 
