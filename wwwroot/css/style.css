@@ -128,7 +128,21 @@ body{
     right: -50vw;
     z-index: 2;
 }
-
+@media (max-width: 768px)
+{
+    .menu-section{
+        border-right: none;
+    }
+    
+    .menu-section-left-bot-corner::before {
+        border-right: none;
+        border-top: none;
+    }
+    .menu-section-left-bot-corner::after {
+        border-right: none;
+        border-top: none;
+    }
+}
 /* Below xl */
 @media (max-width: 1200px) {
     .header-size {
@@ -139,14 +153,8 @@ body{
         display:none;
     }
 
-    .menu-section{
-        border-right: none;
-    }
-    
     
 
-    
-    
 }
     
     
@@ -157,10 +165,5 @@ body{
         font-size: 4rem; /* Większy rozmiar tekstu */
     }
 
-    .menu-section{
-      
-    }
-    
-    
-    
+
 }   
