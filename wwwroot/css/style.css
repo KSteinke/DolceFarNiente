@@ -3,7 +3,7 @@ html{
 }
 
 body{
-    font-family: "Playfair", serif;
+    font-family: "Lora", serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-size: 2rem;
@@ -26,8 +26,10 @@ body{
 
 .header-small{
     color: #000;
-    font-weight: 650;
-    font-size: 2.5rem;
+    font-weight: 540;
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .icon-size{
@@ -46,22 +48,30 @@ body{
 }
 
 .menu-item{
-    padding: 0.5rem 0;
+    padding: 0.7rem 0;
 }
 
 .menu-item-name{
-    font-weight: 800;
-    font-size: 1.35rem;
+    font-weight: 700;
+    font-size: 1.3rem;
 }
 
 .menu-item-price{
-    font-weight: 800;
+    font-weight: 700;
     text-align: right;
-    font-size: 1.35rem;
+    font-size: 1.3rem;
 }
 .menu-item-description{
     font-size: 1rem;
     font-weight: 600;
+}
+
+.menu-header-center{
+    padding: 0 2rem;
+}
+
+.menu-header-row{
+    border-bottom: 2px solid black ;
 }
 
 .color-light{
@@ -128,6 +138,7 @@ body{
     right: -50vw;
     z-index: 2;
 }
+
 @media (max-width: 768px)
 {
     .menu-section{
