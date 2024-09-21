@@ -38,11 +38,11 @@ body{
 }
 
 .menu-col{
-    padding: 0 2rem;
+    
 }
 
 .menu-section{
-    
+    padding: 0rem 2rem;
 }
 
 .menu-item{
@@ -62,6 +62,71 @@ body{
 .menu-item-description{
     font-size: 1rem;
     font-weight: 600;
+}
+
+.color-light{
+    background-color: rgb(255, 244, 224);
+}
+
+.menu-section-right-top-corner {
+    position: relative;
+}
+
+.menu-section-right-top-corner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 55%; /* Dostosuj procent do pożądanej długości */
+    width: 0;
+    border-right: 2px solid #000; /* Obramowanie po prawej */
+}
+
+.menu-section-right-top-corner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35%; /* Dostosuj procent do pożądanej długości */
+    border-top: 2px solid #000; /* Obramowanie na górze */
+}
+
+.menu-section-left-bot-corner {
+    position: relative;
+}
+
+.menu-section-left-bot-corner::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 65%; /* Dostosuj procent do pożądanej długości */
+    width: 0;
+    border-right: 2px solid #000; /* Obramowanie po prawej */
+}
+
+.menu-section-left-bot-corner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 35%; /* Dostosuj procent do pożądanej długości */
+    border-top: 2px solid #000; /* Obramowanie na górze */
+}
+
+.menu-item-image
+{
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Ukrywa nadmiar obrazka */
+    z-index: 2; /* Z-index, aby był nad innymi elementami */
+    width: 50vw;
+    height: 100%;
+    object-fit: cover; /* Dopasowanie obrazka bez zniekształcania */
+    position: absolute;
+    top: 0;
+    right: -50%;
+    z-index: 2;
 }
 
 /* Below xl */
