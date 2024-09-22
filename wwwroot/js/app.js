@@ -6,6 +6,6 @@ menuItems.forEach((item, id) => {
         let name =  item.querySelector(".menu-item-name").textContent;
         let image = document.getElementById(name);
 
-        image.style.right = 0;
+        image.style.display = 'block';
     });
 });

@@ -6,11 +6,49 @@ body{
     font-family: "Lora", serif;
     font-optical-sizing: auto;
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-style: normal;
     padding: 0;
     margin: 0;
     background-color: #FEFFEF;
+}
+
+.topbar-custom {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1000;
+    align-items: center; /* Wyśrodkowanie elementów w pionie */
+    justify-content: center;
+    height: 60px; /* Wysokość paska nawigacyjnego */
+}
+
+/* Stylizacja listy linków */
+.topbar-custom ul {
+    list-style-type: none;
+    display: flex; /* Wyświetlanie elementów w jednej linii */
+    margin: 0;
+    padding: 0;
+    align-items: center; /* Wyśrodkowanie elementów w pionie */
+    height: 100%; /* Dopasowanie wysokości do paska nawigacyjnego */
+    
+}
+
+.topbar-custom ul li {
+    margin: 0 15px; /* Odstęp między linkami */
+}
+
+.topbar-custom ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center; /* Wyśrodkowanie tekstu wewnątrz linków */
+    height: 100%; /* Dopasowanie wysokości do li */
 }
 
 .great-vibes-regular{
@@ -26,8 +64,8 @@ body{
 
 .header-small{
     color: #000;
-    font-weight: 540;
-    font-size: 2rem;
+    font-weight: 650;
+    font-size: 1.75rem;
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
@@ -54,16 +92,16 @@ body{
 
 .menu-item-name{
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .menu-item-price{
     font-weight: 700;
     text-align: right;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 .menu-item-description{
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
 }
 
@@ -79,50 +117,8 @@ body{
     background-color: rgb(255, 244, 224);
 }
 
-.menu-section-right-top-corner {
-    position: relative;
-}
-
-.menu-section-right-top-corner::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 55%; /* Dostosuj procent do pożądanej długości */
-    width: 0;
-    border-right: 2px solid #000; /* Obramowanie po prawej */
-}
-
-.menu-section-right-top-corner::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 35%; /* Dostosuj procent do pożądanej długości */
-    border-top: 2px solid #000; /* Obramowanie na górze */
-}
-
-.menu-section-left-bot-corner {
-    position: relative;
-}
-
-.menu-section-left-bot-corner::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 65%; /* Dostosuj procent do pożądanej długości */
-    width: 0;
-    border-right: 2px solid #000; /* Obramowanie po prawej */
-}
-
-.menu-section-left-bot-corner::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 35%; /* Dostosuj procent do pożądanej długości */
-    border-top: 2px solid #000; /* Obramowanie na górze */
+.border-custom{
+    border: 2px solid #000;
 }
 
 .menu-item-image
@@ -136,8 +132,9 @@ body{
     object-fit: cover; /* Dopasowanie obrazka bez zniekształcania */
     position: absolute;
     top: 0;
-    right: -50vw;
+    right: 0;
     z-index: 2;
+    display: none;
 }
 
 @media (max-width: 576px)
@@ -146,27 +143,56 @@ body{
     {
         padding: 0 1rem;
     }
+
+
+    .topbar-custom {
+        position: fixed;
+        display: flex;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        z-index: 1000;
+        align-items: center; /* Wyśrodkowanie elementów w pionie */
+        justify-content: center;
+        height: 60px; /* Wysokość paska nawigacyjnego */
+    }
+    
+    /* Stylizacja listy linków */
+    .topbar-custom ul {
+        list-style-type: none;
+        display: flex; /* Wyświetlanie elementów w jednej linii */
+        margin: 0;
+        padding: 0;
+        align-items: center; /* Wyśrodkowanie elementów w pionie */
+        height: 100%; /* Dopasowanie wysokości do paska nawigacyjnego */
+        
+    }
+    
+    .topbar-custom ul li {
+        margin: 0 15px; /* Odstęp między linkami */
+    }
+    
+    .topbar-custom ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center; /* Wyśrodkowanie tekstu wewnątrz linków */
+        height: 100%; /* Dopasowanie wysokości do li */
+       
+    }
 }
 
 @media (max-width: 768px)
 {
-    .menu-section{
-        border-right: none;
-    }
     
-    .menu-section-left-bot-corner::before {
-        border-right: none;
-        border-top: none;
-    }
-    .menu-section-left-bot-corner::after {
-        border-right: none;
-        border-top: none;
-    }
 }
 /* Below xl */
 @media (max-width: 1200px) {
     .header-size {
-        font-size: 3rem; /* Mniejszy rozmiar tekstu */
+        font-size: 2.5rem; /* Mniejszy rozmiar tekstu */
     }
 
     .icon-disable{
@@ -182,7 +208,7 @@ body{
 @media (min-width: 1200px){
 
     .header-size {
-        font-size: 4rem; /* Większy rozmiar tekstu */
+        font-size: 3.5rem; /* Większy rozmiar tekstu */
     }
 
 
